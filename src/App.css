@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body{
+  background-color: #212124;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.boxShadow{
+  box-shadow: 0px 0px 15px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.roundedBtn{
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.blueBorder{
+  border-radius: 5px;
+  border: 2px solid #5555ff;
 }
 
-.App-link {
-  color: #61dafb;
+.greenBorder{
+  border-radius: 5px;
+  border: 2px solid #5cb85c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav{
+  background-image: linear-gradient(to right, #212124,  #161616, #212124);
+  box-shadow: 0px 0px 15px black;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0px 0px 15px black;
+}
+
+label:hover {
+  scale: 1.1;
+  transition: .5s;
+}
+
+#historyBox{
+height: 480px;
+border-radius: 15px;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+@media(max-width: 767px){
+  #historyBox{
+      height: 360px;
+      border-radius: 15px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      }
+}
+
+#result{
+  border-radius: 15px;
+}
+
+#reset{
+  position: absolute;
+  top: 13px;
+  right: 0px;
+  transition: .5s;
+}
+
+#reset:hover{
+  transition: .5s;
+  scale: 1.2;
+}
+
+#clickToRoll{
+  transition: .5s;
+}
+
+#clickToRoll:hover{
+  scale: 1.1;
+  transition: .5s;
+}
+
+/* Webkit-scrollbar styles */
+
+#historyBox::-webkit-scrollbar{
+  width: 15px
+  
+}
+
+#historyBox::-webkit-scrollbar-track{
+  background: transparent;
+  border-radius: 100vw;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#historyBox::-webkit-scrollbar-thumb{
+  border: 5px solid #343a40;
+  background: #8c8c8c;
+  border-radius: 100vw;
+}
+
+#historyBox::-webkit-scrollbar-corner{
+  border-radius: 100vw;
 }
