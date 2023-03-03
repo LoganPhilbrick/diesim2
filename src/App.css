@@ -41,6 +41,7 @@ label:hover {
 }
 
 #historyBox{
+  background-color: #343a40;
 height: 480px;
 border-radius: 15px;
 overflow-y: scroll;
@@ -57,6 +58,7 @@ overflow-x: hidden;
 }
 
 #result{
+  background-color: #343a40;
   border-radius: 15px;
 }
 
