@@ -1,36 +1,55 @@
 import React, { useState } from "react";
-import { Col, Row, Button, ButtonGroup } from "reactstrap";
+import { Col, Row } from "reactstrap";
 
 const BottomButtonGroup = () => {
-  const [rSelected, setRSelected] = useState(null);
+  const [checked, setChecked] = useState(null);
 
+  const isChecked = (value) => value === checked;
+
+  const onSelect = ({ target: { value } }) => {
+    setChecked(value);
+  };
+  console.log(checked);
   return (
     <Row>
-      <Col className="text-center pb-3">
-        <div className="p-4 text-light">Number of Sides:</div>
-        <ButtonGroup className="roundedBtn boxShadow">
-          <Button className="btn-dark" onClick={() => setRSelected(1)} active={rSelected === 1}>
+      <Col className="text-center text-light pb-3">
+        <div className="p-4">Number of Sides:</div>
+        <div className="form-check">
+          <input type="radio" name="sideRadios" id="sideRadD4" value="D4" checked={isChecked("D4")} onChange={onSelect} />
+          <label className="form-check-label" htmlFor="sideRadD4">
             D4
-          </Button>
-          <Button className="btn-dark" onClick={() => setRSelected(2)} active={rSelected === 2}>
+          </label>
+        </div>
+        <div className="form-check">
+          <input type="radio" name="sideRadios" id="sideRadD6" value="D6" checked={isChecked("D6")} onChange={onSelect} />
+          <label className="form-check-label" htmlFor="sideRadD6">
             D6
-          </Button>
-          <Button className="btn-dark" onClick={() => setRSelected(3)} active={rSelected === 3}>
+          </label>
+        </div>
+        <div className="form-check">
+          <input type="radio" name="sideRadios" id="sideRadD8" value="D8" checked={isChecked("D8")} onChange={onSelect} />
+          <label className="form-check-label" htmlFor="sideRadD8">
             D8
-          </Button>
-          <Button className="btn-dark" onClick={() => setRSelected(4)} active={rSelected === 4}>
+          </label>
+        </div>
+        <div className="form-check">
+          <input type="radio" name="sideRadios" id="sideRadD10" value="D10" checked={isChecked("D10")} onChange={onSelect} />
+          <label className="form-check-label" htmlFor="sideRadD10">
             D10
-          </Button>
-          <Button className="btn-dark" onClick={() => setRSelected(5)} active={rSelected === 5}>
+          </label>
+        </div>
+        <div className="form-check">
+          <input type="radio" name="sideRadios" id="sideRadD12" value="D12" checked={isChecked("D12")} onChange={onSelect} />
+          <label className="form-check-label" htmlFor="sideRadD12">
             D12
-          </Button>
-          <Button className="btn-dark" onClick={() => setRSelected(6)} active={rSelected === 6}>
+          </label>
+        </div>
+        <div className="form-check">
+          <input type="radio" name="sideRadios" id="sideRadD20" value="D20" checked={isChecked("D20")} onChange={onSelect} />
+          <label className="form-check-label" htmlFor="sideRadD20">
             D20
-          </Button>
-          <Button className="btn-dark" onClick={() => setRSelected(7)} active={rSelected === 7}>
-            D100
-          </Button>
-        </ButtonGroup>
+          </label>
+        </div>
       </Col>
     </Row>
   );
