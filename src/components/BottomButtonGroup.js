@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Col, Row, Button, ButtonGroup } from "reactstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { setNumberOfSides } from "../redux/dieSelection";

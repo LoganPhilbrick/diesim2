@@ -4,6 +4,7 @@ const initialState = {
   numberOfDice: 1,
   numberOfSides: 4,
   rollResults: null,
+  history: [],
 };
 
 export const dieSelectionSlice = createSlice({
@@ -19,10 +20,13 @@ export const dieSelectionSlice = createSlice({
     calculateRolls: (state) => {
       state.rollResults = Math.floor(Math.random() * state.numberOfSides + 1) * state.numberOfDice;
     },
+    trackHistory: (state) => {
+      state.history = [...state.history, `${state.numberOfDice} x D${state.numberOfSides} = ${state.rollResults}`];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setNumberOfDice, setNumberOfSides, calculateRolls } = dieSelectionSlice.actions;
+export const { setNumberOfDice, setNumberOfSides, calculateRolls, trackHistory } = dieSelectionSlice.actions;
 
 export default dieSelectionSlice.reducer;
