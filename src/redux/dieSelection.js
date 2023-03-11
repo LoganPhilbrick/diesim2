@@ -21,7 +21,7 @@ export const dieSelectionSlice = createSlice({
       state.rollResults = Math.floor(Math.random() * state.numberOfSides + 1) * state.numberOfDice;
     },
     trackHistory: (state) => {
-      state.history = [...state.history, `${state.numberOfDice} x D${state.numberOfSides} = ${state.rollResults}`];
+      state.history = [`${state.numberOfDice} x D${state.numberOfSides} = ${state.rollResults}`, ...state.history];
     },
   },
 });
