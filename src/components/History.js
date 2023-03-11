@@ -1,16 +1,18 @@
 import { Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRedo } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { resetHistory } from "../redux/dieSelection";
 
 const HistoryBox = () => {
   const { history } = useSelector((state) => state.dieSelection);
+  const dispatch = useDispatch();
 
   return (
     <Col id="historyBox" xs="10" md="3" className="boxShadow blueBorder ms-md-5">
       <div style={{ display: "flex", justifyContent: "center", position: "relative" }} className="border-bottom">
         <h5 className="text-center p-3 ms-md-3 text-light">History</h5>
-        <button style={{ position: "absolute" }} id="reset" className="btn shadow-none text-light">
+        <button style={{ position: "absolute" }} id="reset" className="btn shadow-none text-light" onClick={() => dispatch(resetHistory)}>
           <FontAwesomeIcon icon={faRedo} />
         </button>
       </div>

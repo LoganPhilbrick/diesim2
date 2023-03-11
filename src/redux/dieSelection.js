@@ -23,10 +23,13 @@ export const dieSelectionSlice = createSlice({
     trackHistory: (state) => {
       state.history = [`${state.numberOfDice} x D${state.numberOfSides} = ${state.rollResults}`, ...state.history];
     },
+    resetHistory: (state) => {
+      state.history = [];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setNumberOfDice, setNumberOfSides, calculateRolls, trackHistory } = dieSelectionSlice.actions;
+export const { setNumberOfDice, setNumberOfSides, calculateRolls, trackHistory, resetHistory } = dieSelectionSlice.actions;
 
 export default dieSelectionSlice.reducer;
