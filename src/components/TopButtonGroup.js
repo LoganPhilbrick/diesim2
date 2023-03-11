@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { setNumberOfDice } from "../redux/dieSelection";
 
 const TopButtonGroup = (props) => {
-  // const [rSelected, setRSelected] = useState(1);
   const rSelected = useSelector((state) => state.dieSelection.numberOfDice);
   const dispatch = useDispatch();
 

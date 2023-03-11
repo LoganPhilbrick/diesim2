@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { calculateRolls, trackHistory } from "../redux/dieSelection";
 
-// import TopButtonGroup from "./components/TopButtonGroup";
-
 const RollButton = () => {
   const state = useSelector((state) => state);
 

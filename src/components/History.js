@@ -4,7 +4,7 @@ import { faRedo } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 
 const HistoryBox = () => {
-  const { numberOfDice, numberOfSides, rollResults, history } = useSelector((state) => state.dieSelection);
+  const { history } = useSelector((state) => state.dieSelection);
 
   return (
     <Col id="historyBox" xs="10" md="3" className="boxShadow blueBorder ms-md-5">

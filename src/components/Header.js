@@ -1,5 +1,3 @@
-// import { Navbar, NavbarBrand, Row, Col, Container } from "reactstrap";
-
 const Header = () => {
   return (
     <nav className="navbar navbar-dark">
