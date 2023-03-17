@@ -35,10 +35,14 @@ const BottomButtonGroup = () => {
           <Button className="btn-dark-50" onClick={() => dispatch(setNumberOfSides(20))} active={rSelected === 20}>
             D20
           </Button>
-          <Button className="btn-dark-50" onClick={() => dispatch(setNumberOfSides(100))} active={rSelected === 100}>
-            D100
-          </Button>
         </ButtonGroup>
+        <Col className="mt-3">
+          <ButtonGroup className="roundedBtn boxShadow">
+            <Button id="D100" className="btn-dark-50" onClick={() => dispatch(setNumberOfSides(100))} active={rSelected === 100}>
+              D100
+            </Button>
+          </ButtonGroup>
+        </Col>
       </Col>
     </Row>
   );
