@@ -25,6 +25,7 @@ export const dieSelectionSlice = createSlice({
     },
     resetHistory: (state) => {
       state.history = [];
+      state.rollResults = null;
     },
   },
 });
